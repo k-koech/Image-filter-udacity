@@ -1,8 +1,5 @@
 import {Sequelize} from 'sequelize-typescript';
-// const { Sequelize } = require('sequelize');
-
 import { config } from './config/config';
-
 
 const c = config.dev;
 
