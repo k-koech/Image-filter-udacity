@@ -1,5 +1,8 @@
-import {Sequelize} from 'sequelize-typescript';
+// import {Sequelize} from 'sequelize-typescript';
+const { Sequelize } = require('sequelize-typescript');
+
 import { config } from './config/config';
+
 
 const c = config.dev;
 
