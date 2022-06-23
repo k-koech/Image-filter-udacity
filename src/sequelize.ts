@@ -1,6 +1,4 @@
-// import {Sequelize} from 'sequelize-typescript';
-const { Sequelize } = require('sequelize-typescript');
-
+import {Sequelize} from 'sequelize-typescript';
 import { config } from './config/config';
 
 
@@ -26,5 +24,4 @@ try {
   console.error('Unable to connect to the database :', error, "\n\n\n\n");
 }
 
-})
-
+})()

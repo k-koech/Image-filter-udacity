@@ -1,5 +1,5 @@
 import AWS = require('aws-sdk');
-import { config } from './src/config/config';
+import { config } from './config/config';
 
 const c = config.dev;
 
