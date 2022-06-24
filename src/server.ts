@@ -1,5 +1,4 @@
 import express from 'express';
-import { sequelize } from './sequelize';
 import bodyParser from 'body-parser';
 import { deleteLocalFiles, filterImageFromURL } from './util/util';
 import { VoiceId } from 'aws-sdk/clients/polly';
