@@ -6,10 +6,14 @@ Udagram is a simple cloud application developed alongside the Udacity Cloud Engi
   http://image-filter-starter-code.us-east-1.elasticbeanstalk.com
 
 # Endpoint URL for elastic beanstalk deployment
-  http://image-filter-starter-code.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg
+  http://image-filter-starter-code.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://media.geeksforgeeks.org/wp-content/uploads/20190328185307/gfg28.png
 
 # GitHub Repository Link
   https://github.com/k-koech/image-filter
+
+
+# NOTE   Not all images load/load faster
+
 
 ***
 ## Getting Setup
