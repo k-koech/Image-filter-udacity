@@ -19,10 +19,9 @@ require('dotenv').config();
     next();
   });
  
-  app.get("/filteredimage",async(req,res)=>{
+  app.get("/filteredimage",async(req:express.Request,res:express.Response)=>{
 
-    let image_url = "Golden_tabby_and_white_kitten_n01.jpg"
-    
+    let image_url =String(req.query.image_url)    
     if( image_url ) 
     {
       filterImageFromURL(image_url)
