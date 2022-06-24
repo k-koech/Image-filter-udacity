@@ -2,11 +2,17 @@
 
 Udagram is a simple cloud application developed alongside the Udacity Cloud Engineering Nanodegree. It allows users to register and log into a web client, post photos to the feed, and process photos using an image filtering microservice.
 
-# Endpoints
+# Elastic BeanStalk URL
+http://image-filter-starter-code-dev.eu-west-3.elasticbeanstalk.com/
 
+GitHub Repository Link
+# https://github.com/cynepton/Udagram-my-own-instagram-on-AWS
+
+
+
+# Endpoint
 1. [Filtered image](http://image-filter-starter-code.us-east-1.elasticbeanstalk.com/filteredimage/) 
-2. [Login](http://image-filter-starter-code.us-east-1.elasticbeanstalk.com/api/users/auth/login)
-3. [Register](http://image-filter-starter-code.us-east-1.elasticbeanstalk.com/api/users/auth/)
+
 
 ***
 ## Getting Setup
