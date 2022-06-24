@@ -18,9 +18,7 @@ require('dotenv').config();
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization");
     next();
   });
-
-  app.use('/api/', IndexRouter)
-  
+ 
   app.get("/filteredimage",async(req,res)=>{
 
     let image_url = "Golden_tabby_and_white_kitten_n01.jpg"
