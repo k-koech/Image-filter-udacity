@@ -2,6 +2,8 @@
 
 Udagram is a simple cloud application developed alongside the Udacity Cloud Engineering Nanodegree. It allows users to register and log into a web client, post photos to the feed, and process photos using an image filtering microservice.
 
+# NOTE   Not all images load/load faster
+
 # DEPLOYMENT URL
   http://image-filter-starter-code.us-east-1.elasticbeanstalk.com
 
@@ -10,9 +12,6 @@ Udagram is a simple cloud application developed alongside the Udacity Cloud Engi
 
 # GitHub Repository Link
   https://github.com/k-koech/image-filter
-
-
-# NOTE   Not all images load/load faster
 
 
 ***
