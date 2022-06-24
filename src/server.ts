@@ -41,7 +41,7 @@ require('dotenv').config();
   
   // Root URI call
   app.get( "/", async ( req, res ) => {
-    res.send( "/api/v0/" );
+    res.send( "Filter your image" );
   } );
   
 
