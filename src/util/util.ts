@@ -19,15 +19,28 @@ export async function filterImageFromURL(inputURL: string): Promise<string> {
         .resize(256, 256) // resize
         .quality(60) // set JPEG quality
         .greyscale() // set greyscale
-        .write(__dirname + outpath, (img) => {
-          resolve(__dirname + outpath);
-        });
+        // .write(__dirname + outpath, (img) => {
+        //   resolve(__dirname + outpath);
+        // });
     } catch (error) {
       reject(error);
     }
   });
-}
+  
+//   return async function main() {
+//   const image1 = await Jimp.read
+// ('https://media.geeksforgeeks.org/wp-content/uploads/20190328185307/gfg28.png');
+//   const image2 = await Jimp.read
+// ('https://media.geeksforgeeks.org/wp-content/uploads/20190328185333/gfg111.png');
+  
+//   //call to blit function 
+//   image1.blit(image2, 20, 40)
+//   //write image
+//   .write('blit1.png');
+//   console.log("Image Processing Completed");
 
+// }
+}
 // deleteLocalFiles
 // helper function to delete files on the local disk
 // useful to cleanup after tasks
