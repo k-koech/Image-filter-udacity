@@ -8,6 +8,7 @@ import { requireAuth } from './controllers/users/routes/auth.router';
 
 import { V0MODELS } from './controllers/model.index';
 import { deleteLocalFiles, filterImageFromURL } from './util/util';
+import { VoiceId } from 'aws-sdk/clients/polly';
 
 require('dotenv').config();
 
@@ -31,21 +32,25 @@ require('dotenv').config();
 
   app.use('/api/', IndexRouter)
   
-  app.get("/filteredimage/",requireAuth, async(req,res)=>{
+  app.get("/filteredimage",
+          // requireAuth, 
+          async(req,res)=>{
 
-    let {image_url}: any = req.query;
-    if( !image_url ) {
-      return res.status(400)
-                .send(`Image is required!!`);
+    let {image_url}: any = req.query.image_url;
+    
+    if( image_url ) {
+      filterImageFromURL(image_url)
+      .then((result)=>{
+        res.sendFile(result);
+        res.on(`finish`,()=>deleteLocalFiles([result]));
+      })
+      .catch((err)=>res.status(400).send(err))
+     
     }
     else
     {
-        filterImageFromURL(image_url)
-        .then((result)=>{
-          res.sendFile(result);
-          res.on(`finish`,()=>deleteLocalFiles([result]));
-        })
-        .catch((err)=>res.status(400).send(err))
+      return res.status(400)
+      .send(`Image is required!!`);
     }
   } );
   // Root URI call
