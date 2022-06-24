@@ -1,23 +1,12 @@
 import express from 'express';
 import { sequelize } from './sequelize';
-
-import { IndexRouter } from './controllers/index.router';
-
 import bodyParser from 'body-parser';
-import { requireAuth } from './controllers/users/routes/auth.router';
-
-import { V0MODELS } from './controllers/model.index';
 import { deleteLocalFiles, filterImageFromURL } from './util/util';
 import { VoiceId } from 'aws-sdk/clients/polly';
 
 require('dotenv').config();
 
-(async () => {
-  await sequelize.addModels(V0MODELS);
-  await sequelize.sync();
-
-// Test database econnection
- 
+(async () => { 
   const app = express();
   const port = process.env.PORT || 8082; // default port to listen
   
@@ -32,13 +21,12 @@ require('dotenv').config();
 
   app.use('/api/', IndexRouter)
   
-  app.get("/filteredimage",
-          // requireAuth, 
-          async(req,res)=>{
+  app.get("/filteredimage",async(req,res)=>{
 
-    let {image_url}: any = req.query.image_url;
+    let image_url = "Golden_tabby_and_white_kitten_n01.jpg"
     
-    if( image_url ) {
+    if( image_url ) 
+    {
       filterImageFromURL(image_url)
       .then((result)=>{
         res.sendFile(result);
@@ -53,6 +41,7 @@ require('dotenv').config();
       .send(`Image is required!!`);
     }
   } );
+  
   // Root URI call
   app.get( "/", async ( req, res ) => {
     res.send( "/api/v0/" );
